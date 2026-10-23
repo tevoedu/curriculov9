@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crie seu currículo profissional em poucos minutos. Assistente gratuito que monta currículos claros, modernos e compatíveis com ATS.">
+    <meta name="theme-color" content="#2b4acb">
+    <title>Gerador de Currículos — Crie seu currículo profissional em minutos</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/print.css">
+    <!-- Bibliotecas de PDF (CDN) -->
+    <!--
+      A exportação usa html2canvas + jsPDF diretamente. A exportação cria um
+      layout A4 fixo e independente da largura da janela para manter o PDF
+      estável em tela cheia, janela dividida e outros tamanhos.
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <div class="logo">Gerador de <span>Currículos</span></div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar modo claro/escuro">🌙</button>
+    </header>
+
+    <main id="app" aria-live="polite">
+        <!-- A aplicação é renderizada aqui pelo app.js -->
+        <noscript>Esta aplicação precisa de JavaScript habilitado para funcionar.</noscript>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/resume.js"></script>
+    <script src="js/pdf.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
